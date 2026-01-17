@@ -10,6 +10,7 @@ public class ObjectInteractor : MonoBehaviour, IInteractable
     private bool isScanned = false;
     [SerializeField] private SOObjectInfo objectInfo; 
     [SerializeField] private float infoDisplayHeight = 1.8f;
+    [SerializeField] private ArtifactCleaner artifactCleaner;
     public void OnInteract()
     {
         Debug.Log("Cube start interact");
@@ -79,5 +80,9 @@ public class ObjectInteractor : MonoBehaviour, IInteractable
     public void SetScanned(bool scanned = true)
     {
         isScanned = scanned;
+        if (isScanned && artifactCleaner != null)
+        {
+            artifactCleaner.Clean();
+        }
     }
 }
