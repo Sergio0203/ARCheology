@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af25fdd6aec3241e3b0da9a099cf0b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectInfo: {fileID: 0}
+  objectInfo: {fileID: 11400000, guid: 5acfb54b5ef594081b18d00711cb359d, type: 2}
   infoDisplayHeight: 0.5
   artifactCleaner: {fileID: -7393938196020209840}
 --- !u!114 &-7393938196020209840
