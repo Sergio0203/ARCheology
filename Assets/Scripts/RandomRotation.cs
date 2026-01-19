@@ -18,11 +18,11 @@ public class RandomRotation : MonoBehaviour
     {
         if (isAnimating)
         {
-        float rotX = Mathf.Sin(Time.time * variability + randomOffset) * speed;
-        float rotY = Mathf.Sin(Time.time * 0.7f * variability + randomOffset) * speed;
-        float rotZ = Mathf.Sin(Time.time * 0.3f * variability + randomOffset) * speed;
+            float rotX = Mathf.Sin(Time.time * variability + randomOffset) * speed;
+            float rotY = Mathf.Sin(Time.time * 0.7f * variability + randomOffset) * speed;
+            float rotZ = Mathf.Sin(Time.time * 0.3f * variability + randomOffset) * speed;
 
-        transform.Rotate(new Vector3(rotX, rotY, rotZ) * Time.deltaTime);
+            transform.Rotate(new Vector3(rotX, rotY, rotZ) * Time.deltaTime);
         }
     }
 
