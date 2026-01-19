@@ -8,9 +8,11 @@ public class ObjectInteractor : MonoBehaviour, IInteractable
     private bool isHeld = false;
     private bool isLocked = false;
     private bool isScanned = false;
+
     [SerializeField] private SOObjectInfo objectInfo; 
     [SerializeField] private float infoDisplayHeight = 1.8f;
     [SerializeField] private ArtifactCleaner artifactCleaner;
+    [SerializeField] private RandomRotation randomRotation;
     public void OnInteract()
     {
         Debug.Log("Cube start interact");
@@ -26,6 +28,7 @@ public class ObjectInteractor : MonoBehaviour, IInteractable
             HoldingManager.Instance.Drop();
             isHeld = false;
             HideObjectInfo();
+            SetAnimation(false);
         }
     }
 
@@ -47,7 +50,11 @@ public class ObjectInteractor : MonoBehaviour, IInteractable
 
     private void ShowObjectInfo( )
     {
-        if(objectInfo == null || !isScanned) return;
+        if(objectInfo == null || !isScanned)
+        {
+            SetAnimation(true);
+            return;
+        }
 
         var infoController = FindObjectOfType<ObjectInfoController>();
 
@@ -84,5 +91,10 @@ public class ObjectInteractor : MonoBehaviour, IInteractable
         {
             artifactCleaner.Clean();
         }
+    }
+
+    private void SetAnimation(bool isAnimating)
+    {
+        randomRotation.setAnimation(isAnimating);
     }
 }

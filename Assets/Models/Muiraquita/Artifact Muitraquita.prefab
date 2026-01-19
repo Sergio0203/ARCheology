@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2396907384891371582}
   - component: {fileID: 8401834120820911156}
   - component: {fileID: -7393938196020209840}
+  - component: {fileID: 8060148558525100163}
   m_Layer: 0
   m_Name: Artifact Muitraquita
   m_TagString: Untagged
@@ -133,6 +134,7 @@ MonoBehaviour:
   objectInfo: {fileID: 11400000, guid: 5acfb54b5ef594081b18d00711cb359d, type: 2}
   infoDisplayHeight: 0.5
   artifactCleaner: {fileID: -7393938196020209840}
+  randomRotation: {fileID: 8060148558525100163}
 --- !u!114 &-7393938196020209840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +150,19 @@ MonoBehaviour:
   cleanMaterial: {fileID: 2100000, guid: ee8d2458cf9df41388d9edae7a34e9fa, type: 2}
   artifactRenderer: {fileID: 7764681392712641063}
   dirtVFX: {fileID: 1721029004884618211}
+--- !u!114 &8060148558525100163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4265940717279941085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55df2ec1979e474ab796354b8044330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
 --- !u!1 &5753644071338240064
 GameObject:
   m_ObjectHideFlags: 0

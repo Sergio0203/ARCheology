@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6741646129441902345}
   - component: {fileID: 7100059814718816124}
   - component: {fileID: 4422609519383798926}
+  - component: {fileID: 4750983261728057541}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -120,6 +121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInfo: {fileID: 11400000, guid: 4bf22a3556bdf47cbaa1a5957e3726c4, type: 2}
+  infoDisplayHeight: 1.8
+  artifactCleaner: {fileID: 0}
+  randomRotation: {fileID: 4750983261728057541}
 --- !u!54 &4422609519383798926
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,3 +151,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4750983261728057541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557992246220859017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55df2ec1979e474ab796354b8044330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
