@@ -7,11 +7,14 @@ public class ArtifactCleaner : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private Material cleanMaterial;
     [SerializeField] private MeshRenderer artifactRenderer;
+
+    [SerializeField] private GameObject dirtVFX;
     public void Clean()
     {
         if (artifactRenderer != null && cleanMaterial != null)
         {
             artifactRenderer.material = cleanMaterial;
+            dirtVFX.SetActive(false);
         }
     }
 }
