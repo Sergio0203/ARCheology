@@ -13,9 +13,12 @@ public class ScannerController : MonoBehaviour
     [SerializeField] GameObject scanUI; 
     private Animator animator;
 
+    private AudioSource audioSource;
+
     void Start()
     {
       animator = GetComponent<Animator>();
+      audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -58,17 +61,34 @@ public class ScannerController : MonoBehaviour
         Debug.Log("Srating Scanning");
 
         animator.SetBool("isScanning", true);
+        PlayScanningSound();
         scanUI.SetActive(false);
-
         interactor.SetLocked(true);
 
         yield return new WaitForSeconds(scanDuration);
         Debug.Log("Scan Complete");
 
         animator.SetBool("isScanning", false);
+        StopScanningSound();
         scanUI.SetActive(true);
         interactor.SetLocked(false);
         interactor.SetScanned();
         
+    }
+
+    private void PlayScanningSound()
+    {
+        if (audioSource != null && !audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+    }
+
+    private void StopScanningSound()
+    {
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
     }
 }
