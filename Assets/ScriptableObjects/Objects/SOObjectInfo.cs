@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 [CreateAssetMenu(fileName = "New Object Info", menuName = "ObjectInfo")]
 public class SOObjectInfo : ScriptableObject
@@ -7,4 +8,6 @@ public class SOObjectInfo : ScriptableObject
     public string objectName;
     [TextArea]
     public string description;
+
+    public Sprite sprite;
 }
